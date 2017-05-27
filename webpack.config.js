@@ -4,7 +4,7 @@ module.exports = {
     context: __dirname + '/app',
     entry: {
         app: './app.js',
-        vendor: ['angular', 'angular-ui-router', 'angular-resource']
+        vendor: ['angular', 'angular-ui-router', 'angular-resource', 'angular-messages']
     },
     output: {
         path: __dirname + '/dist',

@@ -1,0 +1,43 @@
+<div>
+    <form name="userInfoForm" ng-submit="userInfoCntl.submit(userInfoForm)" novalidate>
+        <div class="form-group" ng-class="{'has-error' : userInfoForm.email.$invalid}">
+            <label class="control-label">Email address</label>
+            <input type="email" class="form-control" name="email" placeholder="Email" ng-model="userInfoCntl.user.email" required>
+            <div ng-messages="userInfoForm.email.$error">
+                <p ng-message="email">Your email is invalid.</p>
+                <p ng-message="required">Your email is required.</p>
+            </div>
+        </div>
+        <div class="form-group" ng-class="{'has-error' : userInfoForm.username.$invalid}">
+            <label class="control-label">User name</label>
+            <input type="text" class="form-control" name="username" placeholder="User name" ng-model="userInfoCntl.user.username" ng-minlength="3"
+                ng-maxlength="20" required>
+            <div ng-messages="userInfoForm.username.$error">
+                <p ng-message="minlength">Your User name is too short.</p>
+                <p ng-message="maxlength">Your User name is too long.</p>
+                <p ng-message="required">Your User name is required.</p>
+            </div>
+        </div>
+        <div class="form-group" ng-class="{'has-error' : userInfoForm.name.$invalid}">
+            <label class="control-label">Name</label>
+            <input type="text" class="form-control" name="name" placeholder="Name" ng-model="userInfoCntl.user.name" ng-minlength="3"
+                ng-maxlength="20">
+            <div ng-messages="userInfoForm.name.$error">
+                <p ng-message="minlength">Your name is too short.</p>
+                <p ng-message="maxlength">Your name is too long.</p>
+            </div>
+        </div>
+        <div class="form-group" ng-class="{'has-error' : userInfoForm.url.$invalid}">
+            <label class="control-label">Website</label>
+            <input type="url" class="form-control" name="url" placeholder="Website" ng-model="userInfoCntl.user.website">
+            <div ng-messages="userInfoForm.url.$error">
+                <p ng-message="url">Your url is invalid.</p>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label">Phone</label>
+            <input type="phoe" class="form-control" name="phone" placeholder="Phone" ng-model="userInfoCntl.user.phone">
+        </div>
+        <button ng-disabled="userInfoForm.$invalid" type="submit" class="btn btn-default">Submit</button>
+    </form>
+</div>

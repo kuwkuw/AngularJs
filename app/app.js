@@ -1,6 +1,6 @@
 
 angular
-    .module('app', ['ui.router', 'ngResource'])
+    .module('app', ['ui.router', 'ngResource', 'ngMessages'])
     .constant('apiBase', 'http://jsonplaceholder.typicode.com')
     .config(['$stateProvider', '$urlRouterProvider', '$httpProvider', '$provide', function ($stateProvider, $urlRouterProvider, $httpProvider, $provide) {
 
@@ -11,6 +11,11 @@ angular
                 url: '/',
                 template: require('./views/users.html'),
                 controller: 'usersController as usersCntl'
+            })
+            .state('user', {
+                url: '/users/:id',
+                template: require('./views/userInfo.html'),
+                controller: 'userInfoController as userInfoCntl'
             })
             .state('albums', {
                 url: '/albums',

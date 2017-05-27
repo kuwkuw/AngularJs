@@ -6,4 +6,5 @@ angular
     .controller('commentsController', require('./comments'))
     .controller('albumsController', require('./albums'))
     .controller('usersController', require('./users'))
+    .controller('userInfoController', require('./userInfo'))
     .controller('albumPhotosController', require('./albomPhotos'));
