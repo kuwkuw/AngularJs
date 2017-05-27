@@ -1,8 +1,8 @@
 'use strict';
 
-UsersService.$inject = ['$resource', 'apiBase'];
+Users.$inject = ['$resource', 'apiBase'];
 
-function UsersService($resource, apiBase) {
+function Users($resource, apiBase) {
     var users = $resource(apiBase + '/users');
     return {
         getUsers: getUsers
@@ -13,4 +13,4 @@ function UsersService($resource, apiBase) {
     }
 }
 
-module.exports = UsersService;
+module.exports = Users;
