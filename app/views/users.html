@@ -1,8 +1,10 @@
 <div>
-    {{usersCntl.title}}
-    <ul>
-        <li ng-repeat="user in usersCntl.users">
-            {{user.email}}
+    <ul class="list-group">
+        <li class="row list-group-item" ng-repeat="user in usersCntl.users">
+            <span class="col-md-3">Name: {{user.name}}</span>
+            <span class="col-md-3">Email: {{user.email}}</span>
+            <span class="col-md-3">Phone: {{user.phone}}</span>
+            <span class="col-md-3">Website: {{user.website}}</span>
         </li>
     </ul>
 </div>

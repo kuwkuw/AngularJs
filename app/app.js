@@ -30,8 +30,6 @@ angular
 
     });
 
-// require('angular-ui-router')
-
-// require('./directives');
+require('./directives');
 require('./services');
 require('./controllers');
