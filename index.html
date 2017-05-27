@@ -16,7 +16,6 @@
 <body ng-app="app">
     <div class="container">
         <div ng-controller="mainController as mainCtrl">  
-            <loading-indicator></loading-indicator>          
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li ui-sref-active="active" ng-repeat="link in mainCtrl.links">
@@ -24,6 +23,7 @@
                     </li>
                 </ul>
             </div>
+            <loading-indicator></loading-indicator>          
             <ui-view></ui-view>
         </div>
     </div>

@@ -1,7 +1,9 @@
 <div>
     <ul class="list-group">
         <li class="row list-group-item" ng-repeat="album in albumsCntl.albums track by album.id">
-            <span class="col-md-12">{{album.title}}</span>
+            <a ui-sref="photos({ id: album.id })">
+                <span class="col-md-12">{{album.title}}</span>
+            </a>
         </li>
     </ul>
 </div>

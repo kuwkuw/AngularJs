@@ -17,6 +17,11 @@ angular
                 template: require('./views/albums.html'),
                 controller: 'albumsController as albumsCntl'
             })
+            .state('photos', {
+                url: '/albums/:id',
+                template: require('./views/albumPhotos.html'),
+                controller: 'albumPhotosController as albumPhotosCntl'
+            })
             .state('comments', {
                 url: '/comments',
                 template: require('./views/comments.html'),
@@ -26,7 +31,13 @@ angular
                 url: '/posts',
                 template: require('./views/posts.html'),
                 controller: 'postsController as postsCntl'
-            });
+            })
+            .state('post', {
+                url: '/posts/:id',
+                template: require('./views/post.html'),
+                controller: 'postController as postCntl'
+            })
+            ;
 
         var requestResponseEmiter = {
             onRequest: function (cb) {
