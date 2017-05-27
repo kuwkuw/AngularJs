@@ -1,0 +1,6 @@
+<div calss="rpw">
+    <div class="col-md-2" ng-repeat="pihoto in albumPhotosCntl.albumPhotos track by pihoto.id" style="min-height: 250px">
+        <img ng-src="{{pihoto.thumbnailUrl}}" alt="{{pihoto.title}}">
+        <p>{{pihoto.title}}</p>
+    </div>    
+</div>
