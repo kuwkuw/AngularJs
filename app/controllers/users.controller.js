@@ -7,9 +7,7 @@ function UsersController(usersService) {
     vm.title = 'Users'
     vm.users = [];
 
-
     usersService.getUsers().then(function (res) {
-        console.log(res)
         vm.users = res;
     })
 

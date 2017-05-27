@@ -1,4 +1,6 @@
-'use strict';
-
 angular
-    .module('app').service('usersService', require('./users.service'));
+    .module('app')
+    .factory('albumsService', require('./albums'))
+    .factory('commentsService', require('./comments'))
+    .factory('postosService', require('./posts'))
+    .factory('usersService', require('./users'));

@@ -1,10 +1,14 @@
 'use strict';
 
-CommentsController.$inject = [];
+CommentsController.$inject = ['commentsService'];
 
-function CommentsController() {
+function CommentsController(commentsService) {
     var vm = this;
     vm.comments = [];
+
+    commentsService.getComments().then(function(res){
+        vm.comments = res;
+    });
 }
 
 module.exports = CommentsController;

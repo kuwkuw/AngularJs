@@ -1,10 +1,14 @@
 'use strict';
 
-PostsController.$inject = [];
+PostsController.$inject = ['postosService'];
 
-function PostsController() {
+function PostsController(postosService) {
     var vm = this;
     vm.posts = [];
+
+    postosService.getPosts().then(function(res){
+        vm.posts = res;
+    })
 }
 
 module.exports = PostsController;

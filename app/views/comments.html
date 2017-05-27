@@ -1,3 +1,9 @@
 <div>
-    comments
+    <ul class="list-group">
+        <li class="row list-group-item" ng-repeat="comment in commentsCntl.comments track by comment.id">
+            <span class="col-md-2">{{comment.email}}</span>
+            <p class="col-md-2">{{comment.name}}</p>
+            <p class="col-md-8">{{comment.body}}</p>
+        </li>
+    </ul>
 </div>
