@@ -1,5 +1,5 @@
 # AngularJs
 
-npm install
+`npm install` to all reference install 
 
-webpack
+`webpack` to build
